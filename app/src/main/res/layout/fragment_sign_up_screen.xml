@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    tools:context=".Views.sign_up_screen">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/vazribold"
+                    android:gravity="center"
+                    android:text="ثبت نام"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_register" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="10dp"
+                    app:startIconDrawable="@drawable/ic_login_account"
+                    android:textSize="15dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/register_text_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="نام"
+                        android:gravity="right"
+                        android:fontFamily="@font/vazribold"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="10dp"
+                    app:startIconDrawable="@drawable/ic_login_account"
+                    android:textSize="15dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/register_text_phonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="شماره تلفن"
+                        android:gravity="right"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:fontFamily="@font/vazribold"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="10dp"
+                    app:startIconDrawable="@drawable/ic_login_account"
+                    android:textSize="15dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/register_text_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="نام کاربری"
+                        android:gravity="right"
+                        android:fontFamily="@font/vazribold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="10dp"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_login_password"
+                    android:textSize="15dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/register_text_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="کلمه عبور"
+                        android:gravity="right"
+                        android:fontFamily="@font/vazribold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    app:endIconMode="password_toggle"
+                    android:layout_margin="10dp"
+                    app:startIconDrawable="@drawable/ic_login_password"
+                    android:textSize="15dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/register_text_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="تکرار کلمه عبور"
+                        android:gravity="right"
+                        android:fontFamily="@font/vazribold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/register_btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ثبت نام"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/vazribold"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+        <com.victor.loading.rotate.RotateLoading
+            android:id="@+id/register_progress_loading"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            app:loading_color="#1988F6"
+            app:loading_width="5dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+

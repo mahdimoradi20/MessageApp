@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Views.sign_in_screen"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/vazribold"
+                    android:gravity="center"
+                    android:text="صفحه ورود"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_margin="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_undraw_login_re_4vu2"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="10dp"
+                    app:startIconDrawable="@drawable/ic_login_account"
+                    android:textSize="13dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/login_text_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="نام کاربری"
+                        android:gravity="right"
+                        android:fontFamily="@font/vazribold"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="10dp"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_login_password"
+                    android:textSize="13dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/login_text_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="کلمه عبور"
+                        android:gravity="right"
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/vazribold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/login_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ورود"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/vazribold"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/vazir"
+                        android:text="حساب کاربری ندارید؟"/>
+                    <TextView
+                        android:id="@+id/login_btn_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/vazir"
+                        android:layout_marginRight="3dp"
+                        android:textColor="#2E5173"
+                        android:textStyle="italic"
+                        android:padding="10dp"
+                        android:text="@string/create_account"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</LinearLayout>
+
+

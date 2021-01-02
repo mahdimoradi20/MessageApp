@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/splash_screen">
+
+    <fragment
+        android:id="@+id/main_Page"
+        android:name="ir.mahdi.moradi.messagingapplication.Views.Main_Page"
+        android:label="fragment_main__page"
+        tools:layout="@layout/fragment_main__page" >
+        <action
+            android:id="@+id/action_main_Page_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_main_Page_to_addCreateChat"
+            app:destination="@id/addCreateChat" />
+        <action
+            android:id="@+id/action_main_Page_to_sign_in_screen"
+            app:destination="@id/sign_in_screen"
+            app:popUpTo="@id/main_Page"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chat"
+        android:name="ir.mahdi.moradi.messagingapplication.Views.Chat"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/splash_screen"
+        android:name="ir.mahdi.moradi.messagingapplication.Views.splash_screen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splash_screen_to_main_Page"
+            app:destination="@id/main_Page"
+            app:popUpTo="@id/splash_screen"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splash_screen_to_intro_screen"
+            app:destination="@id/intro_screen"
+            app:popUpTo="@id/splash_screen"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splash_screen_to_sign_in_screen"
+            app:destination="@id/sign_in_screen"
+            app:popUpTo="@id/splash_screen"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/intro_screen"
+        android:name="ir.mahdi.moradi.messagingapplication.Views.intro_screen"
+        android:label="fragment_intro_screen"
+        tools:layout="@layout/fragment_intro_screen" >
+        <action
+            android:id="@+id/action_intro_screen_to_sign_in_screen"
+            app:destination="@id/sign_in_screen"
+            app:popUpTo="@id/intro_screen"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sign_in_screen"
+        android:name="ir.mahdi.moradi.messagingapplication.Views.sign_in_screen"
+        android:label="fragment_sign_in_screen"
+        tools:layout="@layout/fragment_sign_in_screen" >
+        <action
+            android:id="@+id/action_sign_in_screen_to_main_Page"
+            app:destination="@id/main_Page"
+            app:popUpTo="@id/sign_in_screen"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_sign_in_screen_to_sign_up_screen"
+            app:destination="@id/sign_up_screen"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/sign_up_screen"
+        android:name="ir.mahdi.moradi.messagingapplication.Views.sign_up_screen"
+        android:label="fragment_sign_up_screen"
+        tools:layout="@layout/fragment_sign_up_screen" >
+        <action
+            android:id="@+id/action_sign_up_screen_to_sign_in_screen"
+            app:destination="@id/sign_in_screen"
+            app:popUpTo="@id/sign_up_screen"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addCreateChat"
+        android:name="ir.mahdi.moradi.messagingapplication.Views.AddCreateChat"
+        android:label="fragment_add_create_chat"
+        tools:layout="@layout/fragment_add_create_chat" />
+
+</navigation>
